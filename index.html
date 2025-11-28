@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSit - Clinical EMA App for Sedentary Behavior Intervention">
+    <meta name="theme-color" content="#87CEEB">
+    <title>CyberSit - Remember to Move</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/vendor/chart.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <nav class="app-nav">
+            <div class="nav-brand">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6ae1a82f-2aa3-4cf4-a311-8fd435a88844" alt="CyberSit Logo" class="logo-img">
+                <span class="nav-title">CyberSit</span>
+            </div>
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-screen="home">Home</button>
+                <button class="nav-tab" data-screen="history">History</button>
+                <button class="nav-tab" data-screen="settings">Settings</button>
+            </div>
+        </nav>
+        <main id="main-content" class="app-main"></main>
+    </div>
+    <div id="modal-confirm" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <div class="modal-buttons">
+                <button id="modal-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="modal-confirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/db.js"></script>
+    <script src="js/avatar.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Register service worker only when served from a secure context (https) or localhost.
+        if ('serviceWorker' in navigator) {
+            const isLocalhost = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+            if (location.protocol === 'https:' || isLocalhost) {
+                navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+            } else {
+                console.log('Service worker not registered: unsupported origin', location.protocol, location.hostname);
+            }
+        }
+    </script>
+</body>
+</html>

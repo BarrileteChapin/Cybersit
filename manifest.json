@@ -1,0 +1,18 @@
+{
+  "name": "CyberSit - Ecological Momentary Assessment",
+  "short_name": "CyberSit",
+  "description": "Clinical EMA app for sedentary lifestyle intervention",
+  "start_url": "/cybersit/index.html",
+  "scope": "/cybersit/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#87CEEB",
+  "categories": ["health", "medical"],
+  "icons": [{
+    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Ccircle cx='96' cy='96' r='90' fill='%2387CEEB'/%3E%3Ccircle cx='96' cy='96' r='85' fill='%23ADD8E6'/%3E%3Ccircle cx='96' cy='96' r='70' fill='%2387CEEB'/%3E%3Ctext x='96' y='110' font-size='60' text-anchor='middle' fill='white' font-weight='bold'%3ECS%3C/text%3E%3C/svg%3E",
+    "sizes": "192x192",
+    "type": "image/svg+xml",
+    "purpose": "any"
+  }]
+}
