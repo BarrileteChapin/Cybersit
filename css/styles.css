@@ -807,8 +807,11 @@ html, body {
 }
 
 .logo-img { 
-    height: 40px; 
-    width: 40px; 
+  height: 40px; 
+  width: 40px; 
+  display: block;
+  color: var(--color-btn-primary-text);
+  flex-shrink: 0;
 }
 
 .nav-title { 
